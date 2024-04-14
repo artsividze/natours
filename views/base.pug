@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+   block head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    //- meta(http-equiv='Content-Security-Policy', content="script-src 'self' 'unsafe-eval'")
+    //- meta(http-equiv='Content-Security-Policy', content="script-src 'self' api.mapbox.com")
+    //- meta(http-equiv='Content-Security-Policy', content='script-src \'self\' api.mapbox.com;')
+    //- meta(http-equiv='Content-Security-Policy', content="script-src 'self' https://events.mapbox.com")
+    //- meta(http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' api.mapbox.com; worker-src blob:; connect-src https://*.tiles.mapbox.com https://api.mapbox.com https://events.mapbox.com")
+    //- meta(http-equiv='Content-Security-Policy', content='default-src \'self\'; script-src \'self\' \'unsafe-eval\'; style-src \'self\' fonts.googleapis.com;')
+    //- meta(http-equiv="Content-Security-Policy", content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' fonts.googleapis.com;")
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')
+    link(rel='shortcut icon', type='image/png', href='img/favicon.png')
+    link(rel='stylesheet', href='/css/style.css')
+    title Natours | #{title}
+  body
+    // HEADER
+    include _header 
+    // CONTENT
+    block content 
+    // FOOTER
+    include _footer
+
+ 
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js')
+    //- script(src='/js/mapBox.js')
+    //- script(src='/js/login.js')
+    script(src="https://js.stripe.com/v3/")
+    script(src='/js/bundle.js')
+
+    //- script(type='module', src='login.js')
+
+   
+  
+  
