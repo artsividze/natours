@@ -17,7 +17,7 @@ const bookingRouter = require('./routes/bookingRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
 const app = express();
-// start express app
+// start express application
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
